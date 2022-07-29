@@ -46,12 +46,15 @@ export const TextContainer = styled.section`
 
   h1 {
     font-size: 8rem;
-    color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.secondary};
+    text-shadow: 1vw 1vw 1vw #000, 0 0 2vw ${({ theme }) => theme.primary},
+      0 0 2vw ${({ theme }) => theme.primary},
+      0 0 2vw ${({ theme }) => theme.primary};
   }
   h2 {
     font-size: 3rem;
     font-weight: 400;
-    color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.primary};
   }
 
   @media (max-width: 1000px) {
