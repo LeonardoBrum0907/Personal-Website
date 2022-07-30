@@ -7,13 +7,10 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
-  margin-bottom: 5rem;
-  /* border: 1px solid red; */
 
   > img {
     width: 30rem;
     height: 30rem;
-    /* border: 1px solid red; */
   }
 
   @media (max-width: 1000px) {
@@ -33,9 +30,7 @@ export const Container = styled.section`
       height: 10rem;
     }
     > div {
-      /* flex: 1; */
       width: 90%;
-      border: 1px solid red;
     }
   }
 `;
