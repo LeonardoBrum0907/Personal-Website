@@ -8,6 +8,10 @@ export const Container = styled.section`
   justify-content: center;
   margin-top: 2rem;
 
+  div {
+    width: 50%;
+  }
+
   > img {
     width: 30rem;
     height: 30rem;
@@ -40,14 +44,14 @@ export const TextContainer = styled.section`
   width: 100%auto;
 
   h1 {
-    font-size: 8rem;
+    font-size: 7rem;
     color: ${({ theme }) => theme.secondary};
     text-shadow: 1vw 1vw 1vw #000, 0 0 2vw ${({ theme }) => theme.primary},
       0 0 2vw ${({ theme }) => theme.primary},
       0 0 2vw ${({ theme }) => theme.primary};
   }
   h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 400;
     color: ${({ theme }) => theme.primary};
   }

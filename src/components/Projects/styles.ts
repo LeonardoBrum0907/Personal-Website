@@ -32,7 +32,7 @@ export const Container = styled.section`
     a {
       text-transform: uppercase;
       color: #fff;
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: 300;
     }
     @media (max-width: 500px) {
@@ -70,7 +70,7 @@ export const ProjectContainer = styled.div<ProjetoProps>`
     border: none;
     a {
       color: #fff;
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 300;
       display: flex;
       align-items: center;
@@ -105,7 +105,7 @@ export const ProjectContainer = styled.div<ProjetoProps>`
       }
       h2 {
         color: ${({ theme }) => theme.secondary};
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 300;
         text-shadow: -4px 5px 22px #11172b;
       }
