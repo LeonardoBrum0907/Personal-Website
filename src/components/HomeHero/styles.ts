@@ -103,6 +103,9 @@ export const CodeItem = styled.pre`
   @media (max-width: 700px) {
     width: 100%;
   }
+  @media (max-width: 400px) {
+    font-size: 0.6rem;
+  }
   &:hover {
     filter: brightness(1.2);
   }
