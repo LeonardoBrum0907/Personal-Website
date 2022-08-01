@@ -20,7 +20,7 @@ export function ProjectItem({ title, type, slug, img }: ProjectItemProps) {
         </div>
       </section>
       <button type="button">
-        <Link href={`/project/${slug}`}>
+        <Link href={`/projects/${slug}`}>
           <a>
             Ver mais <AiOutlineRightCircle />
           </a>

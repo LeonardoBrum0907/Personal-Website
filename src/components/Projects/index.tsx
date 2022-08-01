@@ -13,7 +13,7 @@ export function Projects() {
           img={pictures}
           title="Projeto 01"
           type="website"
-          slug="teste"
+          slug="project01"
         />
         <ProjectItem
           img={pictures}
