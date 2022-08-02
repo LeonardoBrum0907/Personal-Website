@@ -1,0 +1,29 @@
+{
+  "id": "2db3b45d-02d0-47c1-a463-3f85a944c1fe",
+  "uid": "repudiandae-officiis-facilis",
+  "type": "project",
+  "data": {
+    "title": "grow strategic architectures",
+    "type": "enable front-end e-markets",
+    "link": {
+      "link_type": "Web",
+      "url": "http://google.com"
+    },
+    "thumbnail": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
+    },
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Aute cupidatat laboris aliquip nulla enim. Commodo ea incididunt dolor consectetur elit duis et sint occaecat officia fugiat ex cupidatat.",
+        "spans": []
+      }
+    ]
+  }
+}
