@@ -1,6 +1,6 @@
 import { BannerProject } from '../../../components/BannerProject';
 import { Header } from '../../../components/Header';
-import { ProjectContainer } from './styles';
+import { ProjectContainer } from '../../../styles/ProjectStyles';
 import pictures from '../../../assets/minhaFoto.png';
 
 export default function Project() {
