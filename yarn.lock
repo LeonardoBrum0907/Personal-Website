@@ -1334,14 +1334,15 @@
   resolved "https://registry.npmjs.org/@opentelemetry/context-base/-/context-base-0.14.0.tgz"
   integrity sha512-sDOAZcYwynHFTbLo6n8kIbLiVF3a3BLkrmehJUyEbT9F+Smbi47kLGS2gG2g0fjBLR/Lr1InPD7kXL7FaTqEkw==
 
-"@prismicio/client@5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-5.1.0.tgz#f236d7fca09535d61e599872e7c38afda62b8b3c"
-  integrity sha512-LCb+arVVxJOoPM+8qfLCC/Dqse7mh+Q1k3oo5W5Uzu7vVO+vtc7CUYHxgCDkvekakYHc9407kwWu65ErZw+CPQ==
+"@prismicio/client@^6.4.3", "@prismicio/client@^6.5.1":
+  version "6.6.3"
+  resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-6.6.3.tgz#3cf88d98315e5caf2379e1a56e411643d16f3a86"
+  integrity sha512-cfmcoGXP4zqh7PQSebEfgIJydHi6lsrjZqnlD4ICU3TzitfpP88Q9V9q2qoxCpjO9LiSP8TZIYFPeqQZ3naCLw==
   dependencies:
-    cross-fetch "^3.0.6"
+    "@prismicio/helpers" "^2.3.2"
+    "@prismicio/types" "^0.2.0"
 
-"@prismicio/helpers@^2.3.1", "@prismicio/helpers@^2.3.2":
+"@prismicio/helpers@^2.3.0", "@prismicio/helpers@^2.3.1", "@prismicio/helpers@^2.3.2":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@prismicio/helpers/-/helpers-2.3.2.tgz#602e3f2ab432ecbc91b2485e2b9743ebc94fee48"
   integrity sha512-7FyvybtzvqSvFrDL/Dhb91ADrgwhWaNBA8svX/xs3BrARpGicdNBLiy8WBMM3+pD13tLFi8AxOr5563ORO+siw==
@@ -1351,7 +1352,19 @@
     escape-html "^1.0.3"
     imgix-url-builder "^0.0.3"
 
-"@prismicio/react@^2.4.4":
+"@prismicio/next@^0.1.2":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@prismicio/next/-/next-0.1.3.tgz#4505e7e8554ac3151742fbab08b8675c994e67c7"
+  integrity sha512-93Etxcn5Fd/hs5pREuu753M9k3Xe8qjd9ZcTyhq++vvfKadPP+iQdoP1gZD2kNlRaP1cUk3ms/NigqHfpXkn6w==
+  dependencies:
+    "@prismicio/client" "^6.4.3"
+    "@prismicio/helpers" "^2.3.0"
+    "@prismicio/react" "^2.4.0"
+    "@prismicio/types" "^0.1.27"
+    eslint-plugin-react "^7.30.0"
+    eslint-plugin-react-hooks "^4.5.0"
+
+"@prismicio/react@^2.4.0", "@prismicio/react@^2.4.1":
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/@prismicio/react/-/react-2.4.4.tgz#45ba15e07ed737ca362b63e437db17b59ed4409b"
   integrity sha512-tF3YNGRF32qxjY2H6uRfgvV2R467puMeWIEoquzvQvy4tsjy5ERex54hMMr0GsMaymzNQZbx65Usu8/yGfIG5Q==
@@ -1398,6 +1411,11 @@
     monocle-ts "^2.3.11"
     newtype-ts "^0.3.5"
     tslib "^2.3.1"
+
+"@prismicio/types@^0.1.27":
+  version "0.1.29"
+  resolved "https://registry.yarnpkg.com/@prismicio/types/-/types-0.1.29.tgz#52914a5ba304c8b75fdcf398e5014ac4364fdffb"
+  integrity sha512-wp7DHqMK0FDMcFQfJbqTAzWNBkM6/rRq71jMw6x9m07nWCUqytJQQKg6/15uduIeSqPXmyfJW21drsmChGaxsQ==
 
 "@prismicio/types@^0.2.0":
   version "0.2.0"
@@ -1938,6 +1956,17 @@ array-includes@^3.1.1, array-includes@^3.1.2, array-includes@^3.1.3:
     get-intrinsic "^1.1.1"
     is-string "^1.0.5"
 
+array-includes@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/array-includes/-/array-includes-3.1.5.tgz#2c320010db8d31031fd2a5f6b3bbd4b1aad31bdb"
+  integrity sha512-iSDYZMMyTPkiFasVqfuAQnWAYcvO/SeBSCGKePoEthjp4LEMTe4uLc7b025o4jAZpHhihh8xPo99TNWUWWkGDQ==
+  dependencies:
+    call-bind "^1.0.2"
+    define-properties "^1.1.4"
+    es-abstract "^1.19.5"
+    get-intrinsic "^1.1.1"
+    is-string "^1.0.7"
+
 array-union@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/array-union/-/array-union-2.1.0.tgz"
@@ -1966,6 +1995,16 @@ array.prototype.flatmap@^1.2.4:
     define-properties "^1.1.3"
     es-abstract "^1.18.0-next.1"
     function-bind "^1.1.1"
+
+array.prototype.flatmap@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/array.prototype.flatmap/-/array.prototype.flatmap-1.3.0.tgz#a7e8ed4225f4788a70cd910abcf0791e76a5534f"
+  integrity sha512-PZC9/8TKAIxcWKdyeb77EzULHPrIX/tIZebLJUQOMR1OwYosT8yggdfWScfTBCDj5utONvOuPQQumYsU2ULbkg==
+  dependencies:
+    call-bind "^1.0.2"
+    define-properties "^1.1.3"
+    es-abstract "^1.19.2"
+    es-shim-unscopables "^1.0.0"
 
 array.prototype.reduce@^1.0.4:
   version "1.0.4"
@@ -2961,7 +3000,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-cross-fetch@3.1.5, cross-fetch@^3.0.6:
+cross-fetch@3.1.5:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.5.tgz#e1389f44d9e7ba767907f7af8454787952ab534f"
   integrity sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==
@@ -3531,6 +3570,13 @@ es-array-method-boxes-properly@^1.0.0:
   resolved "https://registry.yarnpkg.com/es-array-method-boxes-properly/-/es-array-method-boxes-properly-1.0.0.tgz#873f3e84418de4ee19c5be752990b2e44718d09e"
   integrity sha512-wd6JXUmyHmt8T5a2xreUwKcGPq6f1f+WwIJkijUqiGcJz1qqnZgP6XIK+QyIWU5lT7imeNxUll48bziG+TSYcA==
 
+es-shim-unscopables@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/es-shim-unscopables/-/es-shim-unscopables-1.0.0.tgz#702e632193201e3edf8713635d083d378e510241"
+  integrity sha512-Jm6GPcCdC30eMLbZ2x8z2WuRwAws3zTBBKuusffYVUrNj/GVSUAZ+xKMaUpfNDR5IbyNA5LJbaecoUVbmUcB1w==
+  dependencies:
+    has "^1.0.3"
+
 es-to-primitive@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/es-to-primitive/-/es-to-primitive-1.2.1.tgz"
@@ -3664,6 +3710,11 @@ eslint-plugin-react-hooks@^4.2.0:
   resolved "https://registry.npmjs.org/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.2.0.tgz"
   integrity sha512-623WEiZJqxR7VdxFCKLI6d6LLpwJkGPYKODnkH3D7WpOG5KM8yWueBd8TLsNAetEJNF5iJmolaAKO3F8yzyVBQ==
 
+eslint-plugin-react-hooks@^4.5.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.6.0.tgz#4c3e697ad95b77e93f8646aaa1630c1ba607edd3"
+  integrity sha512-oFc7Itz9Qxh2x4gNHStv3BqJq54ExXmfC+a1NjAta66IAN87Wu0R/QArgIS9qKzX3dXKPI9H5crl9QchNMY9+g==
+
 eslint-plugin-react@^7.23.2:
   version "7.23.2"
   resolved "https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.23.2.tgz"
@@ -3681,6 +3732,26 @@ eslint-plugin-react@^7.23.2:
     prop-types "^15.7.2"
     resolve "^2.0.0-next.3"
     string.prototype.matchall "^4.0.4"
+
+eslint-plugin-react@^7.30.0:
+  version "7.30.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.30.1.tgz#2be4ab23ce09b5949c6631413ba64b2810fd3e22"
+  integrity sha512-NbEvI9jtqO46yJA3wcRF9Mo0lF9T/jhdHqhCHXiXtD+Zcb98812wvokjWpU7Q4QH5edo6dmqrukxVvWWXHlsUg==
+  dependencies:
+    array-includes "^3.1.5"
+    array.prototype.flatmap "^1.3.0"
+    doctrine "^2.1.0"
+    estraverse "^5.3.0"
+    jsx-ast-utils "^2.4.1 || ^3.0.0"
+    minimatch "^3.1.2"
+    object.entries "^1.1.5"
+    object.fromentries "^2.0.5"
+    object.hasown "^1.1.1"
+    object.values "^1.1.5"
+    prop-types "^15.8.1"
+    resolve "^2.0.0-next.3"
+    semver "^6.3.0"
+    string.prototype.matchall "^4.0.7"
 
 eslint-scope@^5.0.0, eslint-scope@^5.1.1:
   version "5.1.1"
@@ -3792,6 +3863,11 @@ estraverse@^5.1.0, estraverse@^5.2.0:
   version "5.2.0"
   resolved "https://registry.npmjs.org/estraverse/-/estraverse-5.2.0.tgz"
   integrity sha512-BxbNGGNm0RyRYvUdHpIwv9IWzeM9XClbOxwoATuFdOE7ZE6wHL+HQ5T8hoPM+zHvmKzzsEqhgy0GrQ5X13afiQ==
+
+estraverse@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-5.3.0.tgz#2eea5290702f26ab8fe5370370ff86c965d21123"
+  integrity sha512-MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==
 
 esutils@^2.0.2:
   version "2.0.3"
@@ -5703,7 +5779,7 @@ minimatch@^3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimatch@^3.1.1:
+minimatch@^3.1.1, minimatch@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
@@ -6190,6 +6266,15 @@ object.entries@^1.1.2, object.entries@^1.1.3:
     es-abstract "^1.18.0-next.1"
     has "^1.0.3"
 
+object.entries@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/object.entries/-/object.entries-1.1.5.tgz#e1acdd17c4de2cd96d5a08487cfb9db84d881861"
+  integrity sha512-TyxmjUoZggd4OrrU1W66FMDG6CuqJxsFvymeyXI51+vQLN67zYfZseptRge703kKQdo4uccgAKebXFcRCzk4+g==
+  dependencies:
+    call-bind "^1.0.2"
+    define-properties "^1.1.3"
+    es-abstract "^1.19.1"
+
 object.fromentries@^2.0.4:
   version "2.0.4"
   resolved "https://registry.npmjs.org/object.fromentries/-/object.fromentries-2.0.4.tgz"
@@ -6199,6 +6284,15 @@ object.fromentries@^2.0.4:
     define-properties "^1.1.3"
     es-abstract "^1.18.0-next.2"
     has "^1.0.3"
+
+object.fromentries@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/object.fromentries/-/object.fromentries-2.0.5.tgz#7b37b205109c21e741e605727fe8b0ad5fa08251"
+  integrity sha512-CAyG5mWQRRiBU57Re4FKoTBjXfDoNwdFVH2Y1tS9PqCsfUTymAohOkEMSG3aRNKmv4lV3O7p1et7c187q6bynw==
+  dependencies:
+    call-bind "^1.0.2"
+    define-properties "^1.1.3"
+    es-abstract "^1.19.1"
 
 object.getownpropertydescriptors@^2.1.0:
   version "2.1.4"
@@ -6210,6 +6304,14 @@ object.getownpropertydescriptors@^2.1.0:
     define-properties "^1.1.4"
     es-abstract "^1.20.1"
 
+object.hasown@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/object.hasown/-/object.hasown-1.1.1.tgz#ad1eecc60d03f49460600430d97f23882cf592a3"
+  integrity sha512-LYLe4tivNQzq4JdaWW6WO3HMZZJWzkkH8fnI6EebWl0VZth2wL2Lovm74ep2/gZzlaTdV62JZHEqHQ2yVn8Q/A==
+  dependencies:
+    define-properties "^1.1.4"
+    es-abstract "^1.19.5"
+
 object.pick@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/object.pick/-/object.pick-1.3.0.tgz#87a10ac4c1694bd2e1cbf53591a66141fb5dd747"
@@ -6217,7 +6319,7 @@ object.pick@^1.3.0:
   dependencies:
     isobject "^3.0.1"
 
-object.values@^1.1.0:
+object.values@^1.1.0, object.values@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/object.values/-/object.values-1.1.5.tgz#959f63e3ce9ef108720333082131e4a459b716ac"
   integrity sha512-QUZRW0ilQ3PnPpbNtgdNV1PDbEqLIiSFB3l+EnGtBQ/8SUTLj1PZwtQHABZtLgwpJZTSZhuGLOGk57Drx2IvYg==
@@ -6695,6 +6797,15 @@ prop-types@15.7.2, prop-types@^15.7.2:
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
+prop-types@^15.8.1:
+  version "15.8.1"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
+  integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.13.1"
+
 property-expr@^2.0.4:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/property-expr/-/property-expr-2.0.5.tgz#278bdb15308ae16af3e3b9640024524f4dc02cb4"
@@ -6932,9 +7043,9 @@ react-icons@^4.4.0:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.4.0.tgz#a13a8a20c254854e1ec9aecef28a95cdf24ef703"
   integrity sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==
 
-react-is@16.13.1, react-is@^16.7.0, react-is@^16.8.1:
+react-is@16.13.1, react-is@^16.13.1, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
-  resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
 react-refresh@0.8.3:
@@ -7045,7 +7156,7 @@ regexp.prototype.flags@^1.3.1:
     call-bind "^1.0.2"
     define-properties "^1.1.3"
 
-regexp.prototype.flags@^1.4.3:
+regexp.prototype.flags@^1.4.1, regexp.prototype.flags@^1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/regexp.prototype.flags/-/regexp.prototype.flags-1.4.3.tgz#87cab30f80f66660181a3bb7bf5981a872b367ac"
   integrity sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==
@@ -7763,6 +7874,20 @@ string.prototype.matchall@^4.0.4:
     has-symbols "^1.0.1"
     internal-slot "^1.0.3"
     regexp.prototype.flags "^1.3.1"
+    side-channel "^1.0.4"
+
+string.prototype.matchall@^4.0.7:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/string.prototype.matchall/-/string.prototype.matchall-4.0.7.tgz#8e6ecb0d8a1fb1fda470d81acecb2dba057a481d"
+  integrity sha512-f48okCX7JiwVi1NXCVWcFnZgADDC/n2vePlQ/KUCNqCikLLilQvwjMO8+BHVKvgzH0JB0J9LEPgxOGT02RoETg==
+  dependencies:
+    call-bind "^1.0.2"
+    define-properties "^1.1.3"
+    es-abstract "^1.19.1"
+    get-intrinsic "^1.1.1"
+    has-symbols "^1.0.3"
+    internal-slot "^1.0.3"
+    regexp.prototype.flags "^1.4.1"
     side-channel "^1.0.4"
 
 string.prototype.trimend@^1.0.4:
