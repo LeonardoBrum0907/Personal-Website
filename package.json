@@ -42,7 +42,7 @@
     "prettier": "^2.3.0",
     "prismic-ts-codegen": "^0.1.0",
     "slice-machine-ui": "^0.4.1",
-    "typescript": "^4.2.4"
+    "typescript": "^4.7.4"
   },
   "config": {
     "commitizen": {
