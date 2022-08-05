@@ -21,8 +21,9 @@ export function Projects({ projects }: ProjectProps) {
     <Container>
       <SectionTitle title="Ultimos Projetos" />
       <section>
-        {projects.map(project => (
+        {projects.slice(0, 2).map(project => (
           <ProjectItem
+            key={project.slug}
             img={project.thumbnail}
             title={project.title}
             type={project.type}
