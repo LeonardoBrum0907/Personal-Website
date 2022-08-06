@@ -1,3 +1,6 @@
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import { HomeContainer } from '../styles/HomeStyles';
 
 import { Header } from '../components/Header';
@@ -23,6 +26,10 @@ interface HomeProps {
 }
 
 export default function Home({ projectFormatted }: HomeProps) {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <HomeContainer>
       <Header />

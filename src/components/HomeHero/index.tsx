@@ -3,7 +3,7 @@ import pictures from '../../assets/minhaFoto.png';
 
 export function HomeHero() {
   return (
-    <Container>
+    <Container data-aos="fade-up">
       <img src={pictures} alt="Minha foto" />
       <div>
         <TextContainer>
