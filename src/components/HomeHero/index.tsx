@@ -7,10 +7,10 @@ export function HomeHero() {
       <img src={pictures} alt="Minha foto" />
       <div>
         <TextContainer>
-          <h1>Hello!</h1>
-          <h2>I&apos;m Léo, Dev Front-end.</h2>
+          <h1>Hi!</h1>
         </TextContainer>
         <InfosContainer>
+          <span className="spanAnimation">I&apos;m Léo, Dev Front-end.</span>
           <CodeItem>
             <span className="comment">&frasl;&frasl; my presentation</span>
             <span className="purple">Infos</span> {'\u007B'}

@@ -7,7 +7,7 @@ type Simplify<T> = {
   [KeyType in keyof T]: T[KeyType];
 };
 /** Content for project documents */
-interface ProjectDocumentData {
+export interface ProjectDocumentData {
   /**
    * Title field in *project*
    *

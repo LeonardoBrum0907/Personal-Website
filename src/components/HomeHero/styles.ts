@@ -40,20 +40,16 @@ export const Container = styled.section`
 `;
 
 export const TextContainer = styled.section`
-  margin-bottom: 2rem;
-  width: 100%auto;
+  margin-bottom: 1rem;
+  width: 100%;
 
   h1 {
     font-size: 7rem;
     color: ${({ theme }) => theme.secondary};
-    text-shadow: 1vw 1vw 1vw #000, 0 0 2vw ${({ theme }) => theme.primary},
-      0 0 2vw ${({ theme }) => theme.primary},
-      0 0 2vw ${({ theme }) => theme.primary};
-  }
-  h2 {
-    font-size: 2rem;
-    font-weight: 400;
-    color: ${({ theme }) => theme.primary};
+    text-shadow: 0.5vw 0.5vw 0.5vw #000,
+      0 0 1.5vw ${({ theme }) => theme.primary},
+      0 0 1.5vw ${({ theme }) => theme.primary},
+      0 0 1.5vw ${({ theme }) => theme.primary};
   }
 
   @media (max-width: 1000px) {
@@ -61,9 +57,9 @@ export const TextContainer = styled.section`
       font-size: 5rem;
     }
 
-    h2 {
+    /* h2 {
       font-size: 2rem;
-    }
+    } */
   }
 
   @media (max-width: 700px) {
@@ -82,6 +78,36 @@ export const InfosContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  .spanAnimation {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.5rem;
+    font-weight: 400;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    color: ${({ theme }) => theme.primary};
+    width: 285px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s 2s normal, blinkCursor 600ms infinite;
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 284px;
+      }
+    }
+  }
+
+  @keyframes blinkCursor {
+    from {
+      border-right-color: 2px solid rgba(255, 255, 255, 0.75);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
 `;
 
 export const CodeItem = styled.pre`
