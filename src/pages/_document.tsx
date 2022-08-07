@@ -47,7 +47,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Special+Elite&family=JetBrains+Mono:wght@200&family=Montserrat:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
           />
-          <link rel="icon" type="image/x-icon" href="/favicon5.png" />
+          <link rel="icon" type="image/x-icon" href="/favicon5.ico" />
 
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
