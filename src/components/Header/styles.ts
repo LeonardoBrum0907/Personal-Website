@@ -6,17 +6,24 @@ interface NavLinkProps {
 }
 
 export const Container = styled.div`
-  width: 100%auto;
+  width: 100%;
+  padding-left: 2rem;
+
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 4rem;
   border-bottom: 1px solid ${({ theme }) => theme.backgroundLight};
+
+  img {
+    width: 40px;
+  }
 
   ul {
     display: flex;
     gap: 2rem;
     align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 `;
 
