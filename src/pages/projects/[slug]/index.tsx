@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import { BannerProject } from '../../../components/BannerProject';
 import { Header } from '../../../components/Header';
 import { ProjectContainer } from '../../../styles/ProjectStyles';
@@ -31,6 +32,23 @@ export default function Project({ projectFormatted }: ProjectProps) {
 
   return (
     <ProjectContainer>
+      <Head>
+        <title>{projectFormatted.title} | Léo Brum</title>
+
+        <meta name="description" content={projectFormatted.description} />
+        <meta property="og:image" content={projectFormatted.thumbnail} />
+        <meta
+          property="og:image:secure_url"
+          content={projectFormatted.thumbnail}
+        />
+        <meta name="twitter:image" content={projectFormatted.thumbnail} />
+        <meta name="twitter:image:src" content={projectFormatted.thumbnail} />
+        <meta
+          property="og:description"
+          content={projectFormatted.description}
+        />
+      </Head>
+
       <Header />
       <BannerProject
         title={projectFormatted.title}

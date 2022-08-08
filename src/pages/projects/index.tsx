@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next';
+import Head from 'next/head';
 import { Header } from '../../components/Header';
 import { ProjectsBox } from '../../components/ProjectsBox';
 import { ProjectsContainer } from '../../styles/ProjectsStyles';
@@ -18,6 +19,20 @@ interface ProjectsProps {
 export default function Projects({ projectFormatted }: ProjectsProps) {
   return (
     <ProjectsContainer>
+      <Head>
+        <title>Projetos | Léo Brum</title>
+
+        <meta name="description" content="Esses são alguns dos meus projetos" />
+        <meta property="og:image" content="/ogimageProjects.png" />
+        <meta property="og:image:secure_url" content="/ogimageProjects.png" />
+        <meta name="twitter:image" content="/ogimageProjects.png" />
+        <meta name="twitter:image:src" content="/ogimageProjects.png" />
+        <meta
+          property="og:description"
+          content="Esses são alguns dos meus projetos"
+        />
+      </Head>
+
       <Header />
       <main className="container">
         {projectFormatted.map(project => (

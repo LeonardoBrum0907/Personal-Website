@@ -34,19 +34,19 @@ export default function Home({ projectFormatted }: HomeProps) {
   return (
     <HomeContainer>
       <Head>
-        <title>Home | Léo Brum Social</title>
+        <title>Home | Léo Brum</title>
 
         <meta
           name="description"
-          content="Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!"
+          content="Olá, sou o Léo Brum! Aqui vou falar um pouco sobre mim e mostrar alguns dos meus trabalhos como Dev Front-end."
         />
-        <meta property="og:image" content="/ogimage.png" />
-        <meta property="og:image:secure_url" content="/ogimage.png" />
-        <meta name="twitter:image" content="/ogimage.png" />
-        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta property="og:image" content="/ogimageHome.png" />
+        <meta property="og:image:secure_url" content="/ogimageHome.png" />
+        <meta name="twitter:image" content="/ogimageHome.png" />
+        <meta name="twitter:image:src" content="/ogimageHome.png" />
         <meta
           property="og:description"
-          content="Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!"
+          content="Olá, sou o Léo Brum! Aqui vou falar um pouco sobre mim e mostrar alguns dos meus trabalhos como Dev Front-end."
         />
       </Head>
 

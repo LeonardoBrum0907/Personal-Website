@@ -89,7 +89,7 @@ export const InfosContainer = styled.section`
 
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 4s 2s normal, blinkCursor 600ms infinite;
+    animation: typing 4s 2s normal, blinkCursor 500ms infinite;
     @keyframes typing {
       from {
         width: 0;
