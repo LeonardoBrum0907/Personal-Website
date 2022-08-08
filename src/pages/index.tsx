@@ -82,6 +82,6 @@ export async function getStaticProps({ previewData }) {
     props: {
       projectFormatted
     },
-    revalidate: 60 * 60 * 24 // 24 hours
+    revalidate: 60 * 60 * 24 * 7 // 1 week
   };
 }

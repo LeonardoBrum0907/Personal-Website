@@ -66,6 +66,7 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   return {
     props: {
       projectFormatted
-    }
+    },
+    revalidate: 60 * 60 * 24 * 7 // 1 week
   };
 };
