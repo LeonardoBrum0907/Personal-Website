@@ -7,7 +7,7 @@ type Simplify<T> = {
   [KeyType in keyof T]: T[KeyType];
 };
 /** Content for project documents */
-export interface ProjectDocumentData {
+interface ProjectDocumentData {
   /**
    * Title field in *project*
    *
@@ -55,14 +55,15 @@ export interface ProjectDocumentData {
   /**
    * Description field in *project*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
    * - **API ID Path**: project.description
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
    *
    */
-  description: prismicT.RichTextField;
+  description: prismicT.KeyTextField;
+  descriptiontest: prismicT.RichTextField;
 }
 /**
  * project document from Prismic

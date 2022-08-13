@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ThemeProvider } from 'styled-components';
 import { PrismicProvider } from '@prismicio/react';
 import NextNProgress from 'nextjs-progressbar';
+import { Toaster } from 'react-hot-toast';
 import { linkResolver, repositoryName } from '../services/prismic';
 
 import GlobalStyles from '../styles/global';
@@ -27,6 +28,7 @@ function MyApp({ Component, pageProps }) {
             height={3}
             showOnShallow
           />
+          <Toaster position="bottom-right" />
           <Component {...pageProps} />
           <GlobalStyles />
         </ThemeProvider>

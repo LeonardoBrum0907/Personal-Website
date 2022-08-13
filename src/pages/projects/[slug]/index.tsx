@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+// import { RichText } from 'prismic-dom';
 import { BannerProject } from '../../../components/BannerProject';
 import { Header } from '../../../components/Header';
 import { ProjectContainer } from '../../../styles/ProjectStyles';
@@ -11,6 +12,8 @@ type ProjectItem = {
   title: string;
   type: string;
   description: string;
+  descriptiontest: string;
+  subtitle: string;
   link: {
     type_url: string;
     url: string;
@@ -29,6 +32,14 @@ export default function Project({ projectFormatted }: ProjectProps) {
   if (router.isFallback) {
     return <LoadingScreen />;
   }
+
+  // const serializer = (projectFormatted.descriptionTest) => {
+  //   switch (type) {
+  //     case 'paragraph': {
+  //       return { element: 'p', text }
+  //     }
+  //   }
+  // }
 
   return (
     <ProjectContainer>
@@ -57,6 +68,7 @@ export default function Project({ projectFormatted }: ProjectProps) {
       />
 
       <main>
+        <div>{projectFormatted.descriptiontest}</div>
         <p>{projectFormatted.description}</p>
         <button type="button">
           <a href={projectFormatted.link.url}>Ver projeto online</a>
@@ -92,12 +104,12 @@ export const getStaticProps: GetStaticProps = async ({
   const { slug } = params;
 
   const project = await client.getByUID('project', String(slug));
-
   const projectFormatted = {
     slug: project.uid,
     title: project.data.title,
     type: project.data.type,
     description: project.data.description,
+    // descriptiontest: RichText.asHtml(project.data.descriptiontest),
     link: project.data.link,
     thumbnail: project.data.thumbnail.url
   };
