@@ -19,7 +19,7 @@ interface ProjectProps {
 export function Projects({ projects }: ProjectProps) {
   return (
     <Container>
-      <SectionTitle title="Ultimos Projetos" />
+      <SectionTitle title="Main Projects" />
       <section>
         {projects.slice(0, 2).map(project => (
           <ProjectItem
@@ -33,7 +33,7 @@ export function Projects({ projects }: ProjectProps) {
       </section>
       <button type="button">
         <Link href="/projects">
-          <a>Ver todos os projetos</a>
+          <a>All Projects</a>
         </Link>
       </button>
     </Container>
