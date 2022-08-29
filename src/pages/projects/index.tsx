@@ -20,7 +20,7 @@ export default function Projects({ projectFormatted }: ProjectsProps) {
   return (
     <ProjectsContainer>
       <Head>
-        <title>Projetos | Léo Brum</title>
+        <title>Projects | Léo Brum</title>
 
         <meta name="description" content="Esses são alguns dos meus projetos" />
         <meta property="og:image" content="/ogimageProjects.png" />
