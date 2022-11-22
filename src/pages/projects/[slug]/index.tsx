@@ -71,7 +71,9 @@ export default function Project({ projectFormatted }: ProjectProps) {
         <div>{projectFormatted.descriptiontest}</div>
         <p>{projectFormatted.description}</p>
         <button type="button">
-          <a href={projectFormatted.link.url}>Ver projeto online</a>
+          <a href={projectFormatted.link.url} target="_blank" rel="noreferrer">
+            Ver projeto online
+          </a>
         </button>
       </main>
     </ProjectContainer>

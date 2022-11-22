@@ -10,7 +10,12 @@ export function HomeHero() {
           <h1>Hi!</h1>
         </TextContainer>
         <InfosContainer>
-          <span className="spanAnimation">I&apos;m Léo, Dev Front-end.</span>
+          {/* <div className="digitation"> */}
+          <span className="spanAnimation1">
+            I&apos;m Léo, Dev <span className="text-white">Front-end</span>.
+          </span>
+          {/* <span className="spanAnimation2">tudo bem?</span> */}
+          {/* </div> */}
           <CodeItem>
             <span className="comment">&frasl;&frasl; my presentation</span>
             <span className="purple">Infos</span> {'\u007B'}

@@ -45,11 +45,7 @@ export const TextContainer = styled.section`
 
   h1 {
     font-size: 7rem;
-    color: ${({ theme }) => theme.secondary};
-    text-shadow: 0.5vw 0.5vw 0.5vw #000,
-      0 0 1.5vw ${({ theme }) => theme.primary},
-      0 0 1.5vw ${({ theme }) => theme.primary},
-      0 0 1.5vw ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.primary};
   }
 
   @media (max-width: 1000px) {
@@ -79,7 +75,11 @@ export const InfosContainer = styled.section`
   flex-direction: column;
   gap: 2rem;
 
-  .spanAnimation {
+  .text-white {
+    color: white;
+  }
+
+  .spanAnimation1 {
     font-family: 'Special Elite', cursive;
     font-size: 1.5rem;
     font-weight: 400;
