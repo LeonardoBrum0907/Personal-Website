@@ -30,8 +30,8 @@ export const Container = styled.section`
   @media (max-width: 700px) {
     flex-direction: column-reverse;
     > img {
-      width: 10rem;
-      height: 10rem;
+      width: 20rem;
+      height: 20rem;
     }
     > div {
       width: 90%;
