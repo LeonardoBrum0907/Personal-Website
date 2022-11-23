@@ -54,7 +54,7 @@ export function Form() {
   return (
     <FormContainer data-aos="fade-up" onSubmit={handleSubmit}>
       <Input
-        placeholder="nome"
+        placeholder="name"
         value={name}
         onChange={({ target }) => setName(target.value)}
       />
@@ -65,11 +65,11 @@ export function Form() {
         onChange={({ target }) => setEmail(target.value)}
       />
       <TextArea
-        placeholder="mensagem"
+        placeholder="message"
         value={message}
         onChange={({ target }) => setMessage(target.value)}
       />
-      <button type="submit">Enviar</button>
+      <button type="submit">Submit</button>
     </FormContainer>
   );
 }

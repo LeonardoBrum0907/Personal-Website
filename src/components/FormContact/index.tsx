@@ -8,12 +8,12 @@ export function FormContact() {
       <SectionTitle
         title={
           <>
-            Precisa dos <br /> meus serviços
+            Do you need <br /> my services?
           </>
         }
         description={
           <>
-            preencha o formulário abaixo <br /> irie retornar em breve
+            Fill out the form below, <br /> I will return soon.
           </>
         }
       />

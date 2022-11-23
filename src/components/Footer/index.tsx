@@ -22,7 +22,7 @@ export function Footer() {
     <Container>
       <div className="container">
         <button type="button" onClick={handleScrollTop}>
-          Voltar ao topo
+          Back up 👆
         </button>
         <section>
           <AiOutlineInstagram
