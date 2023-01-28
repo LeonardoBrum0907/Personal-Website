@@ -1,0 +1,13 @@
+{
+  "translation": {
+    "welcome": "Hi!",
+    "welcome-subtitle": "I'm Léo, Dev ",
+    "my-presentation": "// my-presentation",
+    "name": "name: ",
+    "age": "age: ",
+    "years": " years",
+    "city": "city: ",
+    "contact": "Contact",
+    "phone-number": "PhoneNumber: "
+  }
+}
