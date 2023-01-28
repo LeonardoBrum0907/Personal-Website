@@ -5,7 +5,7 @@ export const Container = styled.section`
   display: flex;
   gap: 2rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 2rem;
 
   div {
@@ -13,13 +13,14 @@ export const Container = styled.section`
   }
 
   > img {
-    width: 30rem;
+    width: 15rem;
     height: 30rem;
+    object-fit: cover;
   }
 
   @media (max-width: 1000px) {
     > img {
-      width: 15rem;
+      width: 7rem;
       height: 15rem;
     }
 
@@ -30,7 +31,7 @@ export const Container = styled.section`
   @media (max-width: 700px) {
     flex-direction: column-reverse;
     > img {
-      width: 20rem;
+      width: 10rem;
       height: 20rem;
     }
     > div {
@@ -46,6 +47,11 @@ export const TextContainer = styled.section`
   h1 {
     font-size: 7rem;
     color: ${({ theme }) => theme.primary};
+
+    &::selection {
+      background-color: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.secondary};
+    }
   }
 
   @media (max-width: 1000px) {
@@ -85,7 +91,7 @@ export const InfosContainer = styled.section`
     font-weight: 400;
     border-right: 2px solid rgba(255, 255, 255, 0.75);
     color: ${({ theme }) => theme.primary};
-    width: 285px;
+    width: fit-content;
 
     white-space: nowrap;
     overflow: hidden;
@@ -95,7 +101,7 @@ export const InfosContainer = styled.section`
         width: 0;
       }
       to {
-        width: 284px;
+        width: 285px;
       }
     }
   }
