@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import {
   AiOutlineGithub,
   AiFillLinkedin,
@@ -7,6 +8,8 @@ import {
 import { Container } from './styles';
 
 export function Footer() {
+  const { t } = useTranslation();
+
   function handleRedirect(url: string) {
     window.open(url);
   }
@@ -22,7 +25,7 @@ export function Footer() {
     <Container>
       <div className="container">
         <button type="button" onClick={handleScrollTop}>
-          Back up 👆
+          {t('back-up')} 👆
         </button>
         <section>
           <AiOutlineInstagram
