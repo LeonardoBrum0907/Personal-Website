@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import { SectionTitle } from '../SectionTitle';
 import { ProjectItem } from './ProjectItem';
 import { Container } from './styles';
@@ -17,9 +18,11 @@ interface ProjectProps {
 }
 
 export function Projects({ projects }: ProjectProps) {
+  const { t } = useTranslation();
+
   return (
     <Container>
-      <SectionTitle title="Main Projects" />
+      <SectionTitle title={t('main-projects')} />
       <section>
         {projects.slice(0, 2).map(project => (
           <ProjectItem
@@ -33,7 +36,7 @@ export function Projects({ projects }: ProjectProps) {
       </section>
       <button type="button">
         <Link href="/projects">
-          <a>All Projects</a>
+          <a>{t('all-projects')}</a>
         </Link>
       </button>
     </Container>

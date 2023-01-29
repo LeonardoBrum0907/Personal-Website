@@ -10,6 +10,9 @@
     "years": " years",
     "city": "city: ",
     "contact": "Contact",
-    "phone-number": "PhoneNumber: "
+    "phone-number": "PhoneNumber: ",
+    "main-projects": "Main Projects",
+    "see-more": "See more",
+    "all-projects": "All Projects"
   }
 }
