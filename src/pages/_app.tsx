@@ -9,6 +9,8 @@ import { linkResolver, repositoryName } from '../services/prismic';
 import GlobalStyles from '../styles/global';
 import theme from '../styles/theme';
 
+import '../i18n/index';
+
 function MyApp({ Component, pageProps }) {
   return (
     <PrismicProvider
