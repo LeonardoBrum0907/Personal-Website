@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { FaCss3Alt, FaReact } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
@@ -8,7 +9,7 @@ import { Container } from './styles';
 export function Knowledge() {
   return (
     <Container>
-      <SectionTitle title="Knowledge" />
+      <SectionTitle title={t('knowledges')} />
       <section>
         <KnowledgeItem title="HTML" icon={<AiFillHtml5 />} />
         <KnowledgeItem title="CSS" icon={<FaCss3Alt />} />
