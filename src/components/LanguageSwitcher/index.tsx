@@ -18,6 +18,7 @@ export function LanguageSwitcher() {
     <ButtonContainer>
       {languageOptions.map(language => (
         <button
+          key={language.name}
           type="button"
           onClick={() => {
             i18n.changeLanguage(language.value);
