@@ -114,6 +114,12 @@ export const InfosContainer = styled.section`
       border-right-color: transparent;
     }
   }
+
+  @media (max-width: 480px) {
+    .spanAnimation1 {
+      font-size: 1.3rem;
+    }
+  }
 `;
 
 export const CodeItem = styled.pre`
