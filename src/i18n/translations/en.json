@@ -14,6 +14,12 @@
     "main-projects": "Main Projects",
     "see-more": "See more",
     "all-projects": "All Projects",
-    "knowledges": "Knowledges"
+    "knowledges": "Knowledges",
+    "do-you-need": "Do you need",
+    "my-services": "my Services?",
+    "fill-out-form": "Fill out the form below,",
+    "i-will-return": "I will return soon.",
+    "message": "Message:",
+    "submit": "Submit"
   }
 }

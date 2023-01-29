@@ -1,19 +1,22 @@
+import { useTranslation } from 'react-i18next';
 import { SectionTitle } from '../SectionTitle';
 import { Form } from './Form';
 import { Container } from './styles';
 
 export function FormContact() {
+  const { t } = useTranslation();
+
   return (
     <Container>
       <SectionTitle
         title={
           <>
-            Do you need <br /> my services?
+            {t('do-you-need')} <br /> {t('my-services')}
           </>
         }
         description={
           <>
-            Fill out the form below, <br /> I will return soon.
+            {t('fill-out-form')} <br /> {t('i-will-return')}
           </>
         }
       />

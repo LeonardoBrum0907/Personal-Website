@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react';
 import toast from 'react-hot-toast';
+import { useTranslation } from 'react-i18next';
 import { sendContactMail } from '../../services/sendMail';
 import theme from '../../styles/theme';
 import { FormContainer, Input, TextArea } from './styles';
@@ -51,25 +52,27 @@ export function Form() {
     }
   }
 
+  const { t } = useTranslation();
+
   return (
     <FormContainer data-aos="fade-up" onSubmit={handleSubmit}>
       <Input
-        placeholder="name"
+        placeholder={t('name')}
         value={name}
         onChange={({ target }) => setName(target.value)}
       />
       <Input
-        placeholder="email"
+        placeholder="e-mail:"
         type="email"
         value={email}
         onChange={({ target }) => setEmail(target.value)}
       />
       <TextArea
-        placeholder="message"
+        placeholder={t('message')}
         value={message}
         onChange={({ target }) => setMessage(target.value)}
       />
-      <button type="submit">Submit</button>
+      <button type="submit">{t('submit').toLocaleUpperCase()}</button>
     </FormContainer>
   );
 }
