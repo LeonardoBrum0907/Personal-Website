@@ -1,5 +1,7 @@
 {
   "translation": {
+    "home-header": "Home",
+    "projects-header": "projects",
     "welcome": "Hi!",
     "welcome-subtitle": "I'm Léo, Dev ",
     "my-presentation": "// my-presentation",
