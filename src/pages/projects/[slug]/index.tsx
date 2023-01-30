@@ -5,7 +5,7 @@ import Head from 'next/head';
 import { BannerProject } from '../../../components/BannerProject';
 import { Header } from '../../../components/Header';
 import { ProjectContainer } from '../../../styles/ProjectStyles';
-import { createClient } from '../../../services/prismic';
+import { createClient } from '../../../services/prismicio';
 import LoadingScreen from '../../../components/LoadingSreen';
 
 type ProjectItem = {
@@ -20,6 +20,7 @@ type ProjectItem = {
   };
   slug: string;
   thumbnail: string;
+  galery: string[];
 };
 
 interface ProjectProps {
@@ -61,14 +62,31 @@ export default function Project({ projectFormatted }: ProjectProps) {
       </Head>
 
       <Header />
-      <BannerProject
+
+      {projectFormatted.galery.map(url => (
+        <BannerProject
+          key={url}
+          title={projectFormatted.title}
+          type={projectFormatted.type}
+          imgUrl={url}
+        />
+      ))}
+
+      {/* <BannerProject
         title={projectFormatted.title}
         type={projectFormatted.type}
         imgUrl={projectFormatted.thumbnail}
-      />
+      /> */}
+
+      {/* {projectFormatted.galery.map(img => (
+        <img
+          src={img.url}
+          alt=""
+          style={{ height: '100px', width: '100px', border: '1px solid red' }}
+        />
+      ))} */}
 
       <main>
-        <div>{projectFormatted.descriptiontest}</div>
         <p>{projectFormatted.description}</p>
         <button type="button">
           <a href={projectFormatted.link.url} target="_blank" rel="noreferrer">
@@ -106,6 +124,11 @@ export const getStaticProps: GetStaticProps = async ({
   const { slug } = params;
 
   const project = await client.getByUID('project', String(slug));
+
+  const obj = project.data.galery.flatMap((response: object) =>
+    Object.values(response)
+  );
+
   const projectFormatted = {
     slug: project.uid,
     title: project.data.title,
@@ -113,8 +136,11 @@ export const getStaticProps: GetStaticProps = async ({
     description: project.data.description,
     // descriptiontest: RichText.asHtml(project.data.descriptiontest),
     link: project.data.link,
-    thumbnail: project.data.thumbnail.url
+    thumbnail: project.data.thumbnail.url,
+    galery: obj.map(res => res.url)
   };
+
+  // console.log(projectFormatted.galery);
 
   return {
     props: {

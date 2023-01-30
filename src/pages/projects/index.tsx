@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Header } from '../../components/Header';
 import { ProjectsBox } from '../../components/ProjectsBox';
 import { ProjectsContainer } from '../../styles/ProjectsStyles';
-import { createClient } from '../../services/prismic';
+import { createClient } from '../../services/prismicio';
 
 type Project = {
   title: string;

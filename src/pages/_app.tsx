@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { PrismicProvider } from '@prismicio/react';
 import NextNProgress from 'nextjs-progressbar';
 import { Toaster } from 'react-hot-toast';
-import { linkResolver, repositoryName } from '../services/prismic';
+import { linkResolver, repositoryName } from '../services/prismicio';
 
 import GlobalStyles from '../styles/global';
 import theme from '../styles/theme';

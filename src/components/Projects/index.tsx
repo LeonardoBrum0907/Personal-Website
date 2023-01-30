@@ -11,6 +11,7 @@ interface Project {
   description: string;
   link: string;
   thumbnail: string;
+  galery: string[];
 }
 
 interface ProjectProps {

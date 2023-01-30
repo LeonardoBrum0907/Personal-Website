@@ -48,6 +48,30 @@
           "label": "Description",
           "placeholder": ""
         }
+      },
+      "galery": {
+        "type": "Group",
+        "config": {
+          "label": "Galery",
+          "fields": {
+            "img1": {
+              "type": "Image",
+              "config": {
+                "label": "Img1",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "img2": {
+              "type": "Image",
+              "config": {
+                "label": "Img2",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
       }
     }
   }

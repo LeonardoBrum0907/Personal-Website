@@ -1,10 +1,10 @@
 {
-  "id": "ee0f0cef-70c2-4d65-9b20-b42bf8e085e7",
-  "uid": "error-est-maiores",
+  "id": "bbb25336-d10a-44b0-96cf-00a85fb97144",
+  "uid": "dolor-quo-quibusdam",
   "type": "project",
   "data": {
-    "title": "drive leading-edge applications",
-    "type": "whiteboard holistic experiences",
+    "title": "target back-end e-commerce",
+    "type": "architect bricks-and-clicks supply-chains",
     "link": {
       "link_type": "Web",
       "url": "https://slicemachine.dev"
@@ -16,8 +16,50 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
     },
-    "description": "scale B2C convergence"
+    "description": "transform visionary users",
+    "galery": [
+      {
+        "img1": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
+        },
+        "img2": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "img1": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop"
+        },
+        "img2": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?w=900&h=500&fit=crop"
+        }
+      }
+    ]
   }
 }

@@ -63,7 +63,7 @@ interface ProjectDocumentData {
    *
    */
   description: prismicT.KeyTextField;
-  descriptiontest: prismicT.RichTextField;
+  galery: prismicT.GroupField;
 }
 /**
  * project document from Prismic

@@ -11,7 +11,7 @@ import { Projects } from '../components/Projects';
 import { Knowledge } from '../components/Knowledge';
 import { FormContact } from '../components/FormContact';
 import { Footer } from '../components/Footer';
-import { createClient } from '../services/prismic';
+import { createClient } from '../services/prismicio';
 
 interface Project {
   slug: string;
@@ -20,6 +20,7 @@ interface Project {
   description: string;
   link: string;
   thumbnail: string;
+  galery: string[];
 }
 
 interface HomeProps {

@@ -1,7 +1,7 @@
 import * as prismic from '@prismicio/client';
 import * as prismicNext from '@prismicio/next';
 import sm from '../../sm.json';
-import { AllDocumentTypes } from '../../types.generated';
+// import { AllDocumentTypes } from '../../types.generated';
 
 /**
  * The project's Prismic repository name.
@@ -31,14 +31,25 @@ export function linkResolver(doc) {
  *
  * @param config {prismicNext.CreateClientConfig} - Configuration for the Prismic client.
  */
-export const createClient = config => {
-  const client = prismic.createClient<AllDocumentTypes>(sm.apiEndpoint, config);
+// export const createClient = config => {
+//   const client = prismic.createClient<AllDocumentTypes>(sm.apiEndpoint, config);
 
-  prismicNext.enableAutoPreviews({
-    client,
-    previewData: config.previewData,
-    req: config.req
-  });
+//   prismicNext.enableAutoPreviews({
+//     client,
+//     previewData: config.previewData,
+//     req: config.req
+//   });
+
+//   return client;
+// };
+export function createClient({
+  previewData,
+  req,
+  ...config
+}: prismicNext.CreateClientConfig = {}) {
+  const client = prismic.createClient(sm.apiEndpoint, config);
+
+  prismicNext.enableAutoPreviews({ client, previewData, req });
 
   return client;
-};
+}
