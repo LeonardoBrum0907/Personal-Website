@@ -1,7 +1,6 @@
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-// import { RichText } from 'prismic-dom';
 import { BannerProject } from '../../../components/BannerProject';
 import { Header } from '../../../components/Header';
 import { ProjectContainer } from '../../../styles/ProjectStyles';
@@ -34,14 +33,6 @@ export default function Project({ projectFormatted }: ProjectProps) {
     return <LoadingScreen />;
   }
 
-  // const serializer = (projectFormatted.descriptionTest) => {
-  //   switch (type) {
-  //     case 'paragraph': {
-  //       return { element: 'p', text }
-  //     }
-  //   }
-  // }
-
   return (
     <ProjectContainer>
       <Head>
@@ -63,28 +54,11 @@ export default function Project({ projectFormatted }: ProjectProps) {
 
       <Header />
 
-      {projectFormatted.galery.map(url => (
-        <BannerProject
-          key={url}
-          title={projectFormatted.title}
-          type={projectFormatted.type}
-          imgUrl={url}
-        />
-      ))}
-
-      {/* <BannerProject
+      <BannerProject
         title={projectFormatted.title}
         type={projectFormatted.type}
-        imgUrl={projectFormatted.thumbnail}
-      /> */}
-
-      {/* {projectFormatted.galery.map(img => (
-        <img
-          src={img.url}
-          alt=""
-          style={{ height: '100px', width: '100px', border: '1px solid red' }}
-        />
-      ))} */}
+        imgUrl={projectFormatted.galery}
+      />
 
       <main>
         <p>{projectFormatted.description}</p>
@@ -134,13 +108,9 @@ export const getStaticProps: GetStaticProps = async ({
     title: project.data.title,
     type: project.data.type,
     description: project.data.description,
-    // descriptiontest: RichText.asHtml(project.data.descriptiontest),
     link: project.data.link,
-    thumbnail: project.data.thumbnail.url,
-    galery: obj.map(res => res.url)
+    galery: obj.map(res => (res.url ? res.url : null))
   };
-
-  // console.log(projectFormatted.galery);
 
   return {
     props: {

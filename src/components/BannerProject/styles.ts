@@ -5,17 +5,18 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
+  background-image: url(${props => props.imgUrl});
   width: 100%;
-  background: url(${props => props.imgUrl}) no-repeat center;
-  background-size: cover;
   height: 26rem;
   position: relative;
-  padding: 3rem 5rem;
+  padding: 0.5rem 5rem;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-start;
+  gap: 2rem;
+
   section {
     z-index: 2;
+    width: 30%;
     h1 {
       color: ${({ theme }) => theme.primary};
       font-size: 3rem;
@@ -33,9 +34,63 @@ export const Container = styled.div<ContainerProps>`
     width: 100%;
     height: 100%;
     background: ${({ theme }) => theme.gradient};
-    opacity: 0.7;
+    opacity: 0.9;
     transition: 0.5s;
   }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: ${({ theme }) => theme.primary};
+    }
+
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+      background-color: ${({ theme }) => theme.primary};
+    }
+  }
+
+  &:hover {
+    > div.overlay {
+      opacity: 0.85;
+    }
+
+    .swiper {
+      transform: scale(1.02);
+      cursor: grab;
+    }
+  }
+
   @media (max-width: 700px) {
     padding: 2rem 2.5rem;
     height: 20rem;
