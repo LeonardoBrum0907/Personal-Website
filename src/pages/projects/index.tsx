@@ -9,7 +9,7 @@ type Project = {
   title: string;
   type: string;
   slug: string;
-  thumbnail: string;
+  galery: string[];
 };
 
 interface ProjectsProps {
@@ -41,7 +41,7 @@ export default function Projects({ projectFormatted }: ProjectsProps) {
             title={project.title}
             type={project.type}
             slug={project.slug}
-            imgUrl={project.thumbnail}
+            imgUrl={project.galery[0]}
           />
         ))}
       </main>
@@ -54,13 +54,20 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
 
   const page = await client.getByType('project');
 
-  const projectFormatted = page.results.map(project => ({
-    slug: project.uid,
-    title: project.data.title,
-    type: project.data.type,
-    description: project.data.description,
-    link: project.data.link.link_type
-  }));
+  const projectFormatted = page.results.map(project => {
+    const obj = project.data.galery.flatMap((response: object) =>
+      Object.values(response)
+    );
+
+    return {
+      slug: project.uid,
+      title: project.data.title,
+      type: project.data.type,
+      description: project.data.description,
+      link: project.data.link.link_type,
+      galery: obj.map(res => (res.url ? res.url : null))
+    };
+  });
 
   return {
     props: {

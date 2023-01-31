@@ -19,7 +19,6 @@ interface Project {
   type: string;
   description: string;
   link: string;
-  thumbnail: string;
   galery: string[];
 }
 
@@ -70,14 +69,19 @@ export async function getStaticProps({ previewData }) {
 
   const page = await client.getByType('project');
 
-  const projectFormatted = page.results.map(project => ({
-    slug: project.uid,
-    title: project.data.title,
-    type: project.data.type,
-    description: project.data.description,
-    link: project.data.link.link_type,
-    thumbnail: project.data.thumbnail.url
-  }));
+  const projectFormatted = page.results.map(project => {
+    const obj = project.data.galery.flatMap((response: object) =>
+      Object.values(response)
+    );
+    return {
+      slug: project.uid,
+      title: project.data.title,
+      type: project.data.type,
+      description: project.data.description,
+      link: project.data.link.link_type,
+      galery: obj.map(res => (res.url ? res.url : null))
+    };
+  });
 
   return {
     props: {
