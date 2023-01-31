@@ -3,12 +3,12 @@ import styled from 'styled-components';
 export const Container = styled.section`
   width: 100%;
   > section {
-    margin-top: 8rem;
+    margin-top: 6rem;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8rem;
+    justify-content: space-between;
+    /* gap: 8rem; */
     @media (max-width: 1000px) {
       gap: 5rem;
     }
