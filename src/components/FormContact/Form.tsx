@@ -12,7 +12,7 @@ export function Form() {
 
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(event: FormEvent) {
+  const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
     if (loading) return;
@@ -50,7 +50,7 @@ export function Form() {
     } finally {
       setLoading(false);
     }
-  }
+  };
 
   const { t } = useTranslation();
 
