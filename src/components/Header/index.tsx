@@ -9,7 +9,7 @@ export function Header() {
 
   return (
     <Container>
-      <Link href="/">
+      <Link href="/" legacyBehavior>
         <a>
           <img src="/favicon5.png" alt="logo" />
         </a>

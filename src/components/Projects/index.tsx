@@ -35,7 +35,7 @@ export function Projects({ projects }: ProjectProps) {
         ))}
       </section>
       <button type="button">
-        <Link href="/projects">
+        <Link href="/projects" legacyBehavior>
           <a>{t('all-projects')}</a>
         </Link>
       </button>

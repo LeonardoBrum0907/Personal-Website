@@ -11,7 +11,7 @@ interface ProjectsBoxProps {
 export function ProjectsBox({ title, type, imgUrl, slug }: ProjectsBoxProps) {
   return (
     <Container imgUrl={imgUrl}>
-      <Link href={`/projects/${slug}`}>
+      <Link href={`/projects/${slug}`} legacyBehavior>
         <a>
           <div className="overlay" />
           <section>

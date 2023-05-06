@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
     <PrismicProvider
       linkResolver={linkResolver}
       internalLinkComponent={({ href, ...props }) => (
-        <Link href={href}>
+        <Link href={href} legacyBehavior>
           <a {...props} />
         </Link>
       )}

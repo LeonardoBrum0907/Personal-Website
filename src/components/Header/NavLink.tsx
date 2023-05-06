@@ -22,7 +22,7 @@ export function NavLink({ title, path, includes = false }: NavLinkProps) {
 
   return (
     <NavLinkContainer isActive={isActive}>
-      <Link href={path}>
+      <Link href={path} legacyBehavior>
         <a>{title}</a>
       </Link>
     </NavLinkContainer>
