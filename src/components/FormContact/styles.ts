@@ -21,6 +21,7 @@ export const FormContainer = styled.form`
     width: fit-content;
     &:disabled {
       opacity: 0.5;
+      cursor: not-allowed;
     }
     &:not(:disabled):hover {
       background: ${({ theme }) => darken(0.05, theme.primary)};

@@ -21,6 +21,7 @@
     "i-will-return": "Eu retornarei em breve.",
     "message": "Mensagem:",
     "submit": "Enviar",
-    "back-up": "Voltar ao topo"
+    "back-up": "Voltar ao topo",
+    "loading": "Carregando..."
   }
 }

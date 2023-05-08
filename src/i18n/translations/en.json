@@ -21,6 +21,7 @@
     "i-will-return": "I will return soon.",
     "message": "Message:",
     "submit": "Submit",
-    "back-up": "Back up"
+    "back-up": "Back up",
+    "loading": "Loading..."
   }
 }
