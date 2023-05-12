@@ -8,8 +8,8 @@ interface Project {
   slug: string;
   title: string;
   type: string;
-  description: string;
-  link: string;
+  link_online: string;
+  link_github: string;
   galery: string[];
 }
 

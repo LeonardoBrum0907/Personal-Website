@@ -6,19 +6,19 @@ import { HomeContainer } from '../styles/HomeStyles';
 
 import { Header } from '../components/Header';
 import { HomeHero } from '../components/HomeHero';
-// import { Experience } from '../components/Experience';
 import { Projects } from '../components/Projects';
 import { Knowledge } from '../components/Knowledge';
 import { FormContact } from '../components/FormContact';
 import { Footer } from '../components/Footer';
-import { createClient } from '../services/prismicio';
+import { createClient } from '../../prismicio';
 
 interface Project {
   slug: string;
   title: string;
   type: string;
   description: string;
-  link: string;
+  link_online: string;
+  link_github: string;
   galery: string[];
 }
 
@@ -77,8 +77,8 @@ export async function getStaticProps({ previewData }) {
       slug: project.uid,
       title: project.data.title,
       type: project.data.type,
-      description: project.data.description,
-      link: project.data.link.link_type,
+      link_github: project.data.link_github.link_type,
+      link_online: project.data.link_online.link_type,
       galery: obj.map(res => (res.url ? res.url : null))
     };
   });

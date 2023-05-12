@@ -22,6 +22,8 @@
     "message": "Mensagem:",
     "submit": "Enviar",
     "back-up": "Voltar ao topo",
-    "loading": "Carregando..."
+    "loading": "Carregando...",
+    "project-online": "Ver projeto online",
+    "project-github": "Ver repositório"
   }
 }

@@ -1,12 +1,13 @@
 import * as prismic from '@prismicio/client';
 import * as prismicNext from '@prismicio/next';
-import sm from '../../sm.json';
-// import { AllDocumentTypes } from '../../types.generated';
+import configuration from './slicemachine.config.json';
+import { AllDocumentTypes } from './prismicio-types';
+
+export const { repositoryName } = configuration;
 
 /**
  * The project's Prismic repository name.
  */
-export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint);
 
 /**
  * The project's Prismic Link Resolver. This function determines the URL for a given Prismic document.
@@ -47,7 +48,7 @@ export function createClient({
   req,
   ...config
 }: prismicNext.CreateClientConfig = {}) {
-  const client = prismic.createClient(sm.apiEndpoint, config);
+  const client = prismic.createClient<AllDocumentTypes>(repositoryName, config);
 
   prismicNext.enableAutoPreviews({ client, previewData, req });
 

@@ -17,23 +17,7 @@ export const ProjectContainer = styled.div`
       font-weight: 300;
       text-align: justify;
     }
-    button {
-      background: ${({ theme }) => theme.primary};
-      padding: 0.8rem 3rem;
-      border-radius: 0.5rem;
-      border: none;
-      transition: 0.5s;
-      margin-top: 2rem;
-      &:hover {
-        background: ${({ theme }) => darken(0.05, theme.primary)};
-      }
-      a {
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 1.3rem;
-        font-weight: 300;
-      }
-    }
+
     @media (max-width: 700px) {
       padding: 0 2.5rem;
       p {
@@ -45,6 +29,43 @@ export const ProjectContainer = styled.div`
           font-size: 0.9rem;
         }
       }
+    }
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  button {
+    background: ${({ theme }) => theme.primary};
+    padding: 0.8rem 3rem;
+    border-radius: 0.5rem;
+    border: none;
+    transition: 0.5s;
+    margin-top: 2rem;
+    &:not(:disabled):hover {
+      background: ${({ theme }) => darken(0.05, theme.primary)};
+    }
+    &[disabled] {
+      background: gray;
+      cursor: not-allowed;
+    }
+    &:last-child {
+      margin-left: 1rem;
+    }
+    a {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+
+    &:last-child {
+      margin-left: 0;
     }
   }
 `;

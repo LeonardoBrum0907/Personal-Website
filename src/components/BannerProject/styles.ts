@@ -48,20 +48,6 @@ export const Container = styled.div<ContainerProps>`
       font-size: 18px;
       background: #fff;
 
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-
       img {
         display: block;
         width: 100%;
@@ -92,9 +78,11 @@ export const Container = styled.div<ContainerProps>`
   }
 
   @media (max-width: 700px) {
-    padding: 2rem 2.5rem;
+    padding: 2rem 1rem;
     height: 20rem;
     section {
+      position: absolute;
+
       h1 {
         font-size: 1.8rem;
       }

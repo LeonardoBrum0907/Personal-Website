@@ -22,6 +22,9 @@
     "message": "Message:",
     "submit": "Submit",
     "back-up": "Back up",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "project-online": "See project online",
+    "project-github": "See repository"
+
   }
 }

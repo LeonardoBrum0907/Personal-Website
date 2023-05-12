@@ -5,41 +5,27 @@
   "status": true,
   "json": {
     "Main": {
-      "uid": {
-        "type": "UID",
-        "config": {
-          "label": "Uid",
-          "placeholder": ""
-        }
-      },
+      "uid": { "type": "UID", "config": { "label": "Uid", "placeholder": "" } },
       "title": {
         "type": "Text",
-        "config": {
-          "label": "Title",
-          "placeholder": ""
-        }
+        "config": { "label": "Title", "placeholder": "" }
       },
       "type": {
         "type": "Text",
-        "config": {
-          "label": "Type",
-          "placeholder": ""
-        }
+        "config": { "label": "Type", "placeholder": "" }
       },
-      "link": {
+      "link_online": {
         "type": "Link",
         "config": {
-          "label": "Link",
+          "label": "Link_Online",
           "placeholder": "",
+          "allowTargetBlank": false,
           "select": null
         }
       },
-      "description": {
-        "type": "Text",
-        "config": {
-          "label": "Description",
-          "placeholder": ""
-        }
+      "link_github": {
+        "type": "Link",
+        "config": { "label": "Link_Github", "placeholder": "", "select": null }
       },
       "galery": {
         "type": "Group",
@@ -48,45 +34,43 @@
           "fields": {
             "img1": {
               "type": "Image",
-              "config": {
-                "label": "Img1",
-                "constraint": {},
-                "thumbnails": []
-              }
+              "config": { "label": "Img1", "constraint": {}, "thumbnails": [] }
             },
             "img2": {
               "type": "Image",
-              "config": {
-                "label": "Img2",
-                "constraint": {},
-                "thumbnails": []
-              }
+              "config": { "label": "Img2", "constraint": {}, "thumbnails": [] }
             },
             "img3": {
               "type": "Image",
-              "config": {
-                "label": "img3",
-                "constraint": {},
-                "thumbnails": []
-              }
+              "config": { "label": "img3", "constraint": {}, "thumbnails": [] }
             },
             "img4": {
               "type": "Image",
-              "config": {
-                "label": "img4",
-                "constraint": {},
-                "thumbnails": []
-              }
+              "config": { "label": "img4", "constraint": {}, "thumbnails": [] }
             },
             "img5": {
               "type": "Image",
-              "config": {
-                "label": "img5",
-                "constraint": {},
-                "thumbnails": []
-              }
+              "config": { "label": "img5", "constraint": {}, "thumbnails": [] }
             }
           }
+        }
+      },
+      "description_en": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Description_en",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "description_ptbr": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Description_ptBR",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       }
     }

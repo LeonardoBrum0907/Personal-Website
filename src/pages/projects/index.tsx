@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Header } from '../../components/Header';
 import { ProjectsBox } from '../../components/ProjectsBox';
 import { ProjectsContainer } from '../../styles/ProjectsStyles';
-import { createClient } from '../../services/prismicio';
+import { createClient } from '../../../prismicio';
 
 type Project = {
   title: string;
@@ -63,8 +63,8 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
       slug: project.uid,
       title: project.data.title,
       type: project.data.type,
-      description: project.data.description,
-      link: project.data.link.link_type,
+      link_online: project.data.link_online.link_type,
+      link_github: project.data.link_github.link_type,
       galery: obj.map(res => (res.url ? res.url : null))
     };
   });
