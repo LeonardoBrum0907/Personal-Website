@@ -1,16 +1,16 @@
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
 import Head from 'next/head';
+import { useEffect } from 'react';
 import { HomeContainer } from '../styles/HomeStyles';
 
+import { createClient } from '../../prismicio';
+import { Footer } from '../components/Footer';
+import { FormContact } from '../components/FormContact';
 import { Header } from '../components/Header';
 import { HomeHero } from '../components/HomeHero';
-import { Projects } from '../components/Projects';
 import { Knowledge } from '../components/Knowledge';
-import { FormContact } from '../components/FormContact';
-import { Footer } from '../components/Footer';
-import { createClient } from '../../prismicio';
+import { Projects } from '../components/Projects';
 
 interface Project {
   slug: string;
@@ -34,6 +34,21 @@ export default function Home({ projectFormatted }: HomeProps) {
   return (
     <HomeContainer>
       <Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-W65K1NCREH"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-W65K1NCREH', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+
         <title>Home | Léo Brum</title>
 
         <meta
