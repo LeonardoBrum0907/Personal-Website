@@ -1,16 +1,18 @@
 import { PrismicPreview } from '@prismicio/next';
-import Link from 'next/link';
-import { ThemeProvider } from 'styled-components';
 import { PrismicProvider } from '@prismicio/react';
+import Link from 'next/link';
 import NextNProgress from 'nextjs-progressbar';
 import { Toaster } from 'react-hot-toast';
+import { ThemeProvider } from 'styled-components';
 import { linkResolver, repositoryName } from '../../prismicio';
 
 import GlobalStyles from '../styles/global';
 import theme from '../styles/theme';
 
-import '../i18n/index';
+import Analytics from "../components/Analytics";
+
 import { LanguageOptionContextProvider } from '../context/LanguageOptionsContext';
+import '../i18n/index';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -32,6 +34,7 @@ function MyApp({ Component, pageProps }) {
               height={3}
               showOnShallow
             />
+            <Analytics />
             <Toaster position="bottom-right" />
             <Component {...pageProps} />
             <GlobalStyles />

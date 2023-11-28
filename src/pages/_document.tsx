@@ -8,7 +8,6 @@ import Document, {
 } from 'next/document';
 
 import { ServerStyleSheet } from 'styled-components';
-import Analytics from '../components/Analytics';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -42,7 +41,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-br">
         <Head>
-          <Analytics />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
