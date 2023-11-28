@@ -6,6 +6,7 @@ import Document, {
   Main,
   NextScript
 } from 'next/document';
+import Script from 'next/script';
 
 import { ServerStyleSheet } from 'styled-components';
 
@@ -53,6 +54,18 @@ export default class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         </Head>
         <body>
+          <div className="container">
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-W65K1NCREH" />
+            <Script id="google-analytics">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-W65K1NCREH');
+              `}
+            </Script>
+          </div>
           <Main />
           <NextScript />
         </body>
