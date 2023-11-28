@@ -1,20 +1,20 @@
-const Analytics = () => (
-  <>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W65K1NCREH" />;
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
+import Script from 'next/script'
 
-              gtag('config', 'G-W65K1NCREH', {
-                page_path: window.location.pathname
-              });
-            `
-      }}
-    />;
-  </>
-)
+function Home() {
+  return (
+    <div className="container">
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-W65K1NCREH" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-export default Analytics;
+          gtag('config', 'G-W65K1NCREH');
+        `}
+      </Script>
+    </div>
+  )
+}
+
+export default Home
