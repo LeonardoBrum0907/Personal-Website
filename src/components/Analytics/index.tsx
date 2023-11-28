@@ -1,6 +1,6 @@
 const Analytics = () => (
   <>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W65K1NCREH" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W65K1NCREH" />;
     <script
       dangerouslySetInnerHTML={{
         __html: `
@@ -13,8 +13,8 @@ const Analytics = () => (
               });
             `
       }}
-    />
+    />;
   </>
 )
 
-export default Analytics
+export default Analytics;
