@@ -8,6 +8,7 @@ import Document, {
 } from 'next/document';
 
 import { ServerStyleSheet } from 'styled-components';
+import Analytics from '../components/Analytics';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -53,6 +54,7 @@ export default class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         </Head>
         <body>
+          <Analytics />
           <Main />
           <NextScript />
         </body>
