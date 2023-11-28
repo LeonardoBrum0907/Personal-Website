@@ -1,4 +1,4 @@
-import Script from 'next/script'
+import Script from 'next/script';
 
 function Home() {
   return (
@@ -14,7 +14,7 @@ function Home() {
         `}
       </Script>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
