@@ -10,7 +10,9 @@ function Home() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-W65K1NCREH');
+          gtag('config', 'G-W65K1NCREH', {
+            page_path: window.location.pathname,
+          });
         `}
       </Script>
     </div>
