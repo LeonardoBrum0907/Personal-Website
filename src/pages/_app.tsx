@@ -9,7 +9,7 @@ import { linkResolver, repositoryName } from '../../prismicio';
 import GlobalStyles from '../styles/global';
 import theme from '../styles/theme';
 
-import Analytics from "../components/Analytics";
+import Analytics from '../components/Analytics';
 
 import { LanguageOptionContextProvider } from '../context/LanguageOptionsContext';
 import '../i18n/index';
