@@ -1,6 +1,6 @@
 const Analytics = () => (
   <>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W65K1NCREH"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W65K1NCREH" />
     <script
       dangerouslySetInnerHTML={{
         __html: `
@@ -11,7 +11,7 @@ const Analytics = () => (
               gtag('config', 'G-W65K1NCREH', {
                 page_path: window.location.pathname
               });
-            `,
+            `
       }}
     />
   </>
