@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from '@vercel/analytics/next';
 import { PrismicPreview } from '@prismicio/next';
 import { PrismicProvider } from '@prismicio/react';
 import Link from 'next/link';
