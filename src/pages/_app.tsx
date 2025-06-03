@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { PrismicPreview } from '@prismicio/next';
 import { PrismicProvider } from '@prismicio/react';
 import Link from 'next/link';
@@ -10,7 +11,6 @@ import GlobalStyles from '../styles/global';
 import theme from '../styles/theme';
 
 import AnalyticsGoogle from '../components/Analytics';
-import { Analytics } from "@vercel/analytics/next"
 
 import { LanguageOptionContextProvider } from '../context/LanguageOptionsContext';
 import '../i18n/index';
