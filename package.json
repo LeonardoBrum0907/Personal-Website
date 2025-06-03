@@ -16,6 +16,7 @@
     "@prismicio/react": "^2.6.1",
     "@prismicio/richtext": "^2.1.1",
     "@prismicio/slice-simulator-react": "^0.2.2",
+    "@vercel/analytics": "^1.5.0",
     "aos": "2.3.4",
     "axios": "^0.27.2",
     "i18next": "^22.0.6",
