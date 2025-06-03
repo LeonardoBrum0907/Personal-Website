@@ -9,7 +9,8 @@ import { linkResolver, repositoryName } from '../../prismicio';
 import GlobalStyles from '../styles/global';
 import theme from '../styles/theme';
 
-import Analytics from '../components/Analytics';
+import AnalyticsGoogle from '../components/Analytics';
+import { Analytics } from "@vercel/analytics/next"
 
 import { LanguageOptionContextProvider } from '../context/LanguageOptionsContext';
 import '../i18n/index';
@@ -34,10 +35,11 @@ function MyApp({ Component, pageProps }) {
               height={3}
               showOnShallow
             />
-            <Analytics />
+            <AnalyticsGoogle />
             <Toaster position="bottom-right" />
             <Component {...pageProps} />
             <GlobalStyles />
+            <Analytics />
           </LanguageOptionContextProvider>
         </ThemeProvider>
       </PrismicPreview>
