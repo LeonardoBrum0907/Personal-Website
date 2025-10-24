@@ -7,20 +7,20 @@ const PERSONAL_DATA = {
   birthDate: '2002-07-09', // Formato: YYYY-MM-DD
   city: 'Hortolândia-SP',
   phone: '(19) 99965-5577',
-  email: 'leonardobrum.dev@gmail.com',
+  email: 'leonardobrum.dev@gmail.com'
 };
 
 function calculateAge(birthDate: string): number {
   const birth = new Date(birthDate);
   const today = new Date();
-  
+
   let age = today.getFullYear() - birth.getFullYear();
   const monthDiff = today.getMonth() - birth.getMonth();
-  
+
   if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
     age--;
   }
-  
+
   return age;
 }
 
@@ -49,7 +49,11 @@ export function HomeHero() {
             </div>
             <div>
               {t('age')}
-              <span className="blue">&quot;{age}{t('years')}&quot;</span>,
+              <span className="blue">
+                &quot;{age}
+                {t('years')}&quot;
+              </span>
+              ,
             </div>
             <div>
               {t('city')}
@@ -65,9 +69,7 @@ export function HomeHero() {
             </div>
             <div>
               email:{' '}
-              <span className="blue">
-                &quot;{PERSONAL_DATA.email}&quot;
-              </span>
+              <span className="blue">&quot;{PERSONAL_DATA.email}&quot;</span>
             </div>
             {'\u007D'}
           </CodeItem>
