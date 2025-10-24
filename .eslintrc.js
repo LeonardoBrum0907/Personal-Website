@@ -31,6 +31,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'react/require-default-props': 'off',
-    'jsx-a11y/anchor-has-content': 'off'
+    'jsx-a11y/anchor-has-content': 'off',
+    'no-plusplus': 'off'
   }
 };
