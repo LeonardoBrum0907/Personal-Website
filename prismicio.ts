@@ -1,7 +1,6 @@
 import * as prismic from '@prismicio/client';
 import * as prismicNext from '@prismicio/next';
 import configuration from './slicemachine.config.json';
-import { AllDocumentTypes } from './prismicio-types';
 
 export const { repositoryName } = configuration;
 
@@ -48,7 +47,7 @@ export function createClient({
   req,
   ...config
 }: prismicNext.CreateClientConfig = {}) {
-  const client = prismic.createClient<AllDocumentTypes>(repositoryName, config);
+  const client = prismic.createClient(repositoryName, config);
 
   prismicNext.enableAutoPreviews({ client, previewData, req });
 

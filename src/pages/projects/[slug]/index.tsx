@@ -3,6 +3,8 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { useContext } from 'react';
 import { t } from 'i18next';
+import { PrismicRichText } from '@prismicio/react';
+import type { RichTextField } from '@prismicio/types';
 import { BannerProject } from '../../../components/BannerProject';
 import { Header } from '../../../components/Header';
 import {
@@ -16,8 +18,8 @@ import { LanguageOptionsContext } from '../../../context/LanguageOptionsContext'
 type ProjectItem = {
   title: string;
   type: string;
-  description_en: string;
-  description_ptBR: string;
+  description_en: RichTextField;
+  description_ptBR: RichTextField;
   subtitle: string;
   link_online: {
     type_url: string;
@@ -49,7 +51,7 @@ export default function Project({ projectFormatted }: ProjectProps) {
       <Head>
         <title>{projectFormatted.title}</title>
 
-        <meta name="description" content={projectFormatted.description_ptBR} />
+        {/* <meta name="description" content={projectFormatted.description_ptBR} /> */}
         <meta property="og:image" content={projectFormatted.thumbnail} />
         <meta
           property="og:image:secure_url"
@@ -59,7 +61,7 @@ export default function Project({ projectFormatted }: ProjectProps) {
         <meta name="twitter:image:src" content={projectFormatted.thumbnail} />
         <meta
           property="og:description"
-          content={projectFormatted.description_ptBR}
+          // content={projectFormatted.description_ptBR}
         />
       </Head>
 
@@ -73,9 +75,9 @@ export default function Project({ projectFormatted }: ProjectProps) {
 
       <main>
         {language === 'en' ? (
-          <p>{projectFormatted.description_en}</p>
+          <PrismicRichText field={projectFormatted.description_en} />
         ) : (
-          <p>{projectFormatted.description_ptBR}</p>
+          <PrismicRichText field={projectFormatted.description_ptBR} />
         )}
 
         <ButtonContainer>
@@ -138,12 +140,14 @@ export const getStaticProps: GetStaticProps = async ({
     slug: project.uid,
     title: project.data.title,
     type: project.data.type,
-    description_en: project.data.description_en.map(res => res.text),
-    description_ptBR: project.data.description_ptbr.map(res => res.text),
+    description_en: project.data.description_en,
+    description_ptBR: project.data.description_ptbr,
     link_github: project.data.link_github,
     link_online: project.data.link_online,
     galery: objGalery.map(res => (res.url ? res.url : null))
   };
+
+  console.log(projectFormatted);
 
   return {
     props: {
