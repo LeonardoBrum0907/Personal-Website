@@ -152,6 +152,28 @@ interface ProjectDocumentData {
    * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
   description_ptbr: prismic.RichTextField;
+
+  /**
+   * notice_en field in *project*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.notice_en
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  notice_en: prismic.KeyTextField;
+
+  /**
+   * notice_ptbr field in *project*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.notice_ptbr
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  notice_ptbr: prismic.KeyTextField;
 }
 
 /**

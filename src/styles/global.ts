@@ -50,4 +50,12 @@ export default createGlobalStyle`
       padding: 0 2rem;
     }
   }
+  .notice {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: ${({ theme }) => theme.primary};
+    border-left: 2px solid ${({ theme }) => theme.primary};
+    line-height: 3;
+    padding-left: 1rem;
+  }
 `;
