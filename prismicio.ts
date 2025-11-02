@@ -1,7 +1,6 @@
 import * as prismic from '@prismicio/client';
 import * as prismicNext from '@prismicio/next';
 import configuration from './slicemachine.config.json';
-import { AllDocumentTypes } from './prismicio-types';
 
 export const { repositoryName } = configuration;
 
