@@ -48,7 +48,7 @@ export function createClient({
   req,
   ...config
 }: prismicNext.CreateClientConfig = {}) {
-  const client = prismic.createClient<AllDocumentTypes>(repositoryName, config);
+  const client = prismic.createClient(repositoryName, config);
 
   prismicNext.enableAutoPreviews({ client, previewData, req });
 
