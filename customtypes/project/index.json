@@ -3,6 +3,7 @@
   "label": "project",
   "repeatable": true,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "uid": { "type": "UID", "config": { "label": "Uid", "placeholder": "" } },
