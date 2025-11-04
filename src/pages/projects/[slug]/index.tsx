@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import { t } from 'i18next';
 import { PrismicRichText } from '@prismicio/react';
 import type { RichTextField } from '@prismicio/types';
+import { FaExclamationTriangle } from 'react-icons/fa';
 import { BannerProject } from '../../../components/BannerProject';
 import { Header } from '../../../components/Header';
 import {
@@ -15,11 +16,15 @@ import { createClient } from '../../../../prismicio';
 import LoadingScreen from '../../../components/LoadingSreen';
 import { LanguageOptionsContext } from '../../../context/LanguageOptionsContext';
 
+interface Description {
+  text: string;
+}
+
 type ProjectItem = {
   title: string;
   type: string;
-  description_en: RichTextField;
-  description_ptBR: RichTextField;
+  description_en: RichTextField | Description;
+  description_ptBR: RichTextField | Description;
   subtitle: string;
   link_online: {
     type_url: string;
@@ -32,6 +37,8 @@ type ProjectItem = {
   slug: string;
   thumbnail: string;
   galery: string[];
+  notice_en: string;
+  notice_ptBR: string;
 };
 
 interface ProjectProps {
@@ -51,7 +58,10 @@ export default function Project({ projectFormatted }: ProjectProps) {
       <Head>
         <title>{projectFormatted.title}</title>
 
-        {/* <meta name="description" content={projectFormatted.description_ptBR} /> */}
+        <meta
+          name="description"
+          content={projectFormatted.description_ptBR[0].text}
+        />
         <meta property="og:image" content={projectFormatted.thumbnail} />
         <meta
           property="og:image:secure_url"
@@ -61,7 +71,7 @@ export default function Project({ projectFormatted }: ProjectProps) {
         <meta name="twitter:image:src" content={projectFormatted.thumbnail} />
         <meta
           property="og:description"
-          // content={projectFormatted.description_ptBR}
+          content={projectFormatted.description_ptBR[0].text}
         />
       </Head>
 
@@ -74,10 +84,26 @@ export default function Project({ projectFormatted }: ProjectProps) {
       />
 
       <main>
+        {projectFormatted.notice_en && projectFormatted.notice_ptBR ? (
+          language === 'en' ? (
+            <span className="notice">
+              <FaExclamationTriangle /> {projectFormatted.notice_en}
+            </span>
+          ) : (
+            <span className="notice">
+              <FaExclamationTriangle /> {projectFormatted.notice_ptBR}
+            </span>
+          )
+        ) : null}
+
         {language === 'en' ? (
-          <PrismicRichText field={projectFormatted.description_en} />
+          <PrismicRichText
+            field={projectFormatted.description_en as RichTextField}
+          />
         ) : (
-          <PrismicRichText field={projectFormatted.description_ptBR} />
+          <PrismicRichText
+            field={projectFormatted.description_ptBR as RichTextField}
+          />
         )}
 
         <ButtonContainer>
@@ -142,12 +168,12 @@ export const getStaticProps: GetStaticProps = async ({
     type: project.data.type,
     description_en: project.data.description_en,
     description_ptBR: project.data.description_ptbr,
+    notice_en: project.data.notice_en,
+    notice_ptBR: project.data.notice_ptbr,
     link_github: project.data.link_github,
     link_online: project.data.link_online,
     galery: objGalery.map(res => (res.url ? res.url : null))
   };
-
-  console.log(projectFormatted);
 
   return {
     props: {

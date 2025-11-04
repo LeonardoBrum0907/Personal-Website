@@ -7,7 +7,7 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
   background-image: url(${props => props.imgUrl});
   width: 100%;
-  height: 26rem;
+  height: 28rem;
   position: relative;
   padding: 0.5rem 5rem;
   display: flex;
@@ -46,13 +46,13 @@ export const Container = styled.div<ContainerProps>`
     .swiper-slide {
       text-align: center;
       font-size: 18px;
-      background: #fff;
+      background: ${({ theme }) => theme.background};
 
       img {
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
 
@@ -82,6 +82,8 @@ export const Container = styled.div<ContainerProps>`
     height: 20rem;
     section {
       position: absolute;
+      bottom: 0;
+      width: 100%;
 
       h1 {
         font-size: 1.8rem;
